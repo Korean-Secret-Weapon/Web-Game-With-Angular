@@ -31,9 +31,8 @@
 			get : function(sqlId) {
 				return $http.get('/get', { params : { query : sqlId }});
 			},
-			save : function(card) {
-				var url = card.id ? baseUrl + '/' + card.id : baseUrl;
-				return $http.post(url, card);
+			join : function(sqlId,data) {
+				return $http.post('/join', { data : { data : data }});
 			}
 		};
 	}]);
@@ -46,7 +45,19 @@
 		});
 	}
 			
-	function JoinController($scope){
+	function JoinController($scope,server){
+		$scope.join = function(){
+			if($scope.form.password!=$scope.form.password2){
+				alert('Incorrected Password.');
+				return;
+			}
+			server.join("main.join",$scope.form).success(function(data, status, headers, config) {
+				alert('회원가입을 축하합니다.');
+				$location.path("/main");
+			}).error(function(data, status, headers, config) {
+				alert('error code: '+status);
+			});
+		}
 	}
 	
 	function AdminController($scope){

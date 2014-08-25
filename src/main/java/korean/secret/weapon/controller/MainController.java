@@ -1,4 +1,6 @@
 package korean.secret.weapon.controller;
+import java.util.Map;
+
 import korean.secret.weapon.service.CommonService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,18 @@ public class MainController {
 	public ModelAndView getData(@RequestParam(value="query") String query) throws Exception {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("list", commonService.select(query));
+		mav.setViewName("jsonView");
+		return mav;
+	}
+	
+	@RequestMapping(value = "/join")
+	public ModelAndView join(@RequestParam(value="data") Map<String,Object> data) throws Exception {
+		ModelAndView mav = new ModelAndView();
+
+		System.out.println();
+		System.out.println(data);
+		System.out.println();
+		
 		mav.setViewName("jsonView");
 		return mav;
 	}

@@ -5,9 +5,6 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
  
-/**
- * Handles requests for the application home page.
- */
 @Service
 public interface CommonService {
  
