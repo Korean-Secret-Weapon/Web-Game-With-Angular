@@ -9,9 +9,9 @@
     </div>
   </div>
   <div class="form-group">
-    <label for="inputNickname" class="col-lg-2 control-label">Nick Name</label>
+    <label for="inputNickname" class="col-lg-2 control-label">Name</label>
     <div class="col-lg-10">
-      <input type="password" class="form-control" id="inputNickname" ng-model="form.nick" placeholder="Password">
+      <input type="text" class="form-control" id="inputName" ng-model="form.name" placeholder="Name">
     </div>
   </div>
   <div class="form-group">

@@ -13,8 +13,27 @@ public class CommonDao {
     @Autowired
     private SqlSessionTemplate sqlSession;
     
-	@SuppressWarnings("unchecked")
-	public List<Map<String,Object>> select(String sqlId){
+	public List<Map<String,Object>> list(String sqlId,Map<String,Object> param){
         return (List<Map<String,Object>>) sqlSession.selectList(sqlId);
+    }
+	
+	public Map<String,Object> map(String sqlId,Map<String,Object> param){
+        return (Map<String,Object>)sqlSession.selectOne(sqlId, param);
+    }
+	
+	public String one(String sqlId,Map<String,Object> param){
+        return (String)sqlSession.selectOne(sqlId, param);
+    }
+	
+	public void update(Map<String,Object> param,String sqlId){
+        sqlSession.update(sqlId,param);
+    }
+	
+	public void delete(Map<String,Object> param,String sqlId){
+        sqlSession.delete(sqlId,param);
+    }
+	
+	public void insert(Map<String,Object> param,String sqlId){
+        sqlSession.insert(sqlId,param);
     }
 }
