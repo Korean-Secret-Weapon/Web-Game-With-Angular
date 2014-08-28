@@ -1,4 +1,10 @@
-    <div class="col-sm-12 container">
+     <div id="userInfo" class="panel panel-default" style="position:absolute;width:15%;margin:20px 10px 10px 10px;">
+	  <div class="panel-heading">User Infomation</div>
+	  <div class="panel-body">
+	    <span id="name" ng-model="name">{{name}}</span>
+	  </div>
+	</div>
+    <div class="col-sm-10 container" style="left:18%;width:70%;">
     	<div class="page-header">
 		  <h1>Notice</h1>
 		</div>

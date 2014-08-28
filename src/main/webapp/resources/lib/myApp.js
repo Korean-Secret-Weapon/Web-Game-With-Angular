@@ -7,14 +7,12 @@
 	var myApp = angular.module('myApp', []);
 	
 	var userInfo = {
-		id : null,
 		name : null
 	};
 	
 	$(function(){
 		$('#btnLogout').click(function(){
 			alert('정상적으로 로그아웃 처리되었습니다.');
-			userInfo.id=null;
 			userInfo.name=null;
 			location.replace("/");
 		});
@@ -22,7 +20,6 @@
 			
 	myApp.config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider){
 		$locationProvider.html5Mode(true);
-		
 		$routeProvider.when('/', {
 			controller: MainController,
 			templateUrl : 'views/main.jsp'
@@ -128,11 +125,11 @@
 	}
 			
 	function MainController($scope,server){
-		if(userInfo.name!=null){
-			$('#lv').text(userInfo.lv);
-			$('#name').text(userInfo.name);
+		if(userInfo.name==null){
+			$scope.name="로그인이 필요합니다.";
+		}else{
+			$scope.name=userInfo.name;
 		}
-		$('#sidebar').hide();
 		server.list(null,"main.notice_srch")
 		.success(function(data, status, headers, config) {
 			$scope.items = data.list;
@@ -142,7 +139,6 @@
 	}
 			
 	function JoinController($scope,$location,server){
-		$('#sidebar').hide();
 		$scope.join = function(){
 			if($scope.form.password!=$scope.form.password2){
 				alert('Incorrected Password.');
@@ -162,7 +158,6 @@
 	}
 	
 	function LoginController($scope,$location,server){
-		$('#sidebar').hide();
 		$scope.login = function(){
 			if($scope.login.email=="admin" && $scope.login.password=="admin"){
 				alert('반갑습니다. 관리자님!');
@@ -177,7 +172,6 @@
 					$('#btnJoin').hide();
 					$('#btnLogin').hide();
 					$('#btnLogout').show();
-					$('#userInfo').show();
 					$location.path("/");
 				}).error(function(data, status, headers, config) {
 					alert('error code: '+status);
@@ -187,5 +181,5 @@
 	}
 	
 	function MinivillController($scope){
-		$('#sidebar').show();
+		/*$('#sidebar').show();*/
 	}
