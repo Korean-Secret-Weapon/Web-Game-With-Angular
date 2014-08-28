@@ -7,7 +7,7 @@
 	    <span id="name" ng-model="name">{{name}}</span>
 	  </div>
 	</div>
-    <div class="sidebar-offcanvas" style="position:absolute;top:210px;width:15%;margin:0px 10px 10px 10px;" id="sidebar" role="navigation">
+    <div class="sidebar-offcanvas" style="position:absolute;top:230px;width:15%;margin:0px 10px 10px 10px;" id="sidebar" role="navigation">
           <div class="well sidebar-nav">
             <ul class="nav">
               <li>Talk</li>

@@ -20,9 +20,9 @@
         <tbody>
           <tr ng-repeat='item in items'>
           	<td>{{$index+1}}</td>
-			<td>{{item.EMPNO}}</td>
-			<td>{{item.ENAME}}</td>
-			<td>{{item.JOB}}</td>
+			<td>{{item.TITLE}}</td>
+			<td>{{item.WRITER}}</td>
+			<td>{{item.REG_DATE}}</td>
           </tr>
         </tbody>
       </table>

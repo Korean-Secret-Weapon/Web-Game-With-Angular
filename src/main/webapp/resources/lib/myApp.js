@@ -123,13 +123,17 @@
 		dataMap.headers = headers;
 		return JSON.stringify(dataMap);
 	}
-			
-	function MainController($scope,server){
+	
+	function makeUserInfo($scope){
 		if(userInfo.name==null){
 			$scope.name="로그인이 필요합니다.";
 		}else{
 			$scope.name=userInfo.name;
 		}
+	}
+			
+	function MainController($scope,server){
+		makeUserInfo($scope);
 		server.list(null,"main.notice_srch")
 		.success(function(data, status, headers, config) {
 			$scope.items = data.list;
@@ -181,5 +185,6 @@
 	}
 	
 	function MinivillController($scope){
+		makeUserInfo($scope);
 		/*$('#sidebar').show();*/
 	}
