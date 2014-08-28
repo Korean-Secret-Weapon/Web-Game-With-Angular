@@ -9,5 +9,6 @@
 	
 	<mappers>
 		<mapper resource="korean/secret/weapon/xml/main.xml"/>
+		<mapper resource="korean/secret/weapon/xml/login.xml"/>
 	</mappers>
 </configuration>

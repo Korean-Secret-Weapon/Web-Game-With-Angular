@@ -1,4 +1,4 @@
-<div class="form-join well">
+<div class="form-join well" style="margin-top:20px;">
 <h2 class="form-signin-heading">Sign Up</h2>
 <hr>
 <form class="form-horizontal" role="form">

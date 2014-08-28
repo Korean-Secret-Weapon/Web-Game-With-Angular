@@ -547,7 +547,7 @@ h4 small,
 
 .page-header {
   padding-bottom: 9px;
-  margin: 40px 0 20px;
+  margin: 0px 0 20px;
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -4925,8 +4925,9 @@ a.list-group-item.active > .badge,
 }
 
 .jumbotron {
-  padding: 30px;
-  margin-bottom: 30px;
+  padding: 10px;
+  height:45px;
+  margin-top: 20px;
   font-size: 21px;
   font-weight: 200;
   line-height: 2.1428571435;
@@ -4949,15 +4950,15 @@ a.list-group-item.active > .badge,
 
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
   .container .jumbotron {
-    padding-right: 60px;
-    padding-left: 60px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
   .jumbotron h1 {
-    font-size: 63px;
+    font-size: 40px;
   }
 }
 
