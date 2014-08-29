@@ -36,7 +36,7 @@
               <a href="" class="dropdown-toggle" data-toggle="dropdown">Games<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="/minivill">Mini Village</a></li>
-                <li><a href="">Game2</a></li>
+                <li><a href="/games/sutda">Sutda</a></li>
                 <li><a href="">Game3</a></li>
               </ul>
             </li>
@@ -50,33 +50,6 @@
 	      </div>
       </div>
     </div>
-    <div id="userInfo" class="panel panel-default" style="width:15%;position:absolute;display:none;margin:40px 15px 15px 15px;">
-	  <div class="panel-heading">User Infomation</div>
-	  <div class="panel-body">
-	    <span id="name"></span><br/>
-	  </div>
-	</div>
-    <div class="col-xs-2 col-sm-2 sidebar-offcanvas" style="top:170px;display:none;" id="sidebar" role="navigation">
-          <div class="well sidebar-nav">
-            <ul class="nav">
-              <li>Talk</li>
-              <li class="active"><a href="#">Rule</a></li>
-              <li><a href="#">Tutorial</a></li>
-              <li>Play</li>
-              <li><a href="#">Single Play</a></li>
-              <li><a href="#">Multi Play</a></li>
-              <li>Love</li>
-              <li><a href="#">Score</a></li>
-              <li><a href="#">Rank</a></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-    <div ng-view class="container" style="width:65%;min-height:600px;"></div>
-    <div class="container" style="width:65%;">
-    <footer>
-    	<hr>
-        <p>Korean Secret Weapon&copy; Company 2014.</p>
-      </footer>
-    </div>
+    <div ng-view style="min-height:600px;"></div>
 </body>
 </html>
